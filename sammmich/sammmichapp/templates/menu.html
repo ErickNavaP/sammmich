@@ -1,0 +1,21 @@
+
+<div>
+    <button><a href="{% url 'sammmich' %}">Home</a></button>
+
+</div> 
+
+<h1>Menu</h1>
+
+<ol>
+    {% for cheese in cheeses %}
+        {% for meat in meats %}
+            {% for topping in toppings %}
+                <li> {{ meat |title  }} with {{ cheese | title }} and {{ topping | title }} </li>
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+</ol>
+
+<button><a href="/sandwich">Return to Sandwich Home</button>
+</body>
+</html>

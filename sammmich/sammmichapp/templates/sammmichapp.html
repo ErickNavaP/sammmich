@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <h1>Sammmich Home</h1>
+    <img src="https://media.30seconds.com/tip/lg/Grilled-Cheese-Sandwich-Ideas-20-Creative-Ways-to-Make-a-G-20617-88a23048eb-1615952482.jpg" alt = "sammmiches" width = '450', height = 'auto'>
+
+    <h3> Ingredients</h3>
+
+    <ul>
+        {% for ingredient in ingredients %} 
+        <li> 
+            <a href="/sammmich/ingredients/{{ ingredient }}"> {{ ingredient }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div>
+    <button><a href="{% url 'menu' %}"> Menu</a></button>
+    </div>
+
+    <p> Click the button if you are hungry!</p>
+
+    <div>
+        <button><a href="/sammmich/random"> Make a sammmich</a></button>
+    </div>
+</body>
+
+</html>
